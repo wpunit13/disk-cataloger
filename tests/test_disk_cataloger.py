@@ -2,13 +2,11 @@
 
 import unittest
 from unittest.mock import MagicMock, patch, mock_open
-import os
 from datetime import datetime, timezone
 import logging
 
 # Import the classes we want to test
 from database_operations import DatabaseManager, logger as db_logger
-from gui_scan_and_insert_file import DiskScannerThread  # We'll test this later
 
 
 class TestDatabaseManager(unittest.TestCase):

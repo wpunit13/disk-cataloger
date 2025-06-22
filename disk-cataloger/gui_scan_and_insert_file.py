@@ -321,8 +321,13 @@ class DiskCatalogerApp(QWidget):
             logger.info(f"GUI: No results found for search term '{search_term}' (disk: {search_disk if search_disk else 'All'}).")
 
 
-if __name__ == '__main__':
+
+
+def main():
     app = QApplication(sys.argv)
-    window = DiskCatalogerApp()
-    window.show()
+    main_window = DiskCatalogerApp()
+    main_window.show()
     sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()

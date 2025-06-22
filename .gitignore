@@ -1,2 +1,14 @@
 *.xml
 *.iml
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.vscode/
