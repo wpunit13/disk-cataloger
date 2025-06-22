@@ -3,7 +3,7 @@
 DATABASE_CONFIG = {
     "dbname": "disk_cataloger",
     "user": "postgres",  # IMPORTANT: Replace with your PostgreSQL username
-    "password": "",  # IMPORTANT: Replace with your PostgreSQL password
+    "password": "admin",  # IMPORTANT: Replace with your PostgreSQL password
     "host": "localhost",
     "port": 5452
 }
