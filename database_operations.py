@@ -38,6 +38,9 @@ class DatabaseManager:
         except psycopg2.Error as e:
             logger.error(f"Error connecting to database: {e}")
             return None
+        except Exception as e:
+            logger.error(f"An unexpected error occurred during database connection: {e}")
+            return None
 
     def create_tables(self):
         """Creates necessary tables if they don't exist."""
@@ -185,6 +188,9 @@ class DatabaseManager:
             logger.info(f"Search for '{search_term}' (disk: {disk_name if disk_name else 'All'}) returned {len(results)} results.")
         except psycopg2.Error as e:
             logger.error(f"Error searching database for '{search_term}': {e}")
+        except Exception as e:
+            logger.error(f"An unexpected error happened during file search: {e}", exc_info=True)
+
         finally:
             if conn:
                 conn.close()
